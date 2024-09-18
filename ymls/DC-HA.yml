@@ -1,0 +1,17 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: home-automation
+    image: "ghcr.io/home-assistant/home-assistant:latest"
+    volumes:
+      - $PWD/config:/config
+      - $PWD/foo:/config/foo
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/ttyAMA0:/dev/ttyAMA0
