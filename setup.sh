@@ -9,4 +9,4 @@ mkdir ~/.HA && mkdir ~/.pihole
 
 ## Copy yml files 
 cp ./ymls/DC-HA.yml ~/.HA/docker-compose.yml && \
-cp ./ymls/DC-PH.yml ~/.pihoile/docker-compose.yml
+cp ./ymls/DC-PH.yml ~/.pihole/docker-compose.yml
